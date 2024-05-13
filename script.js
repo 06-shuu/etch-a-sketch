@@ -1,28 +1,78 @@
 const grid = document.querySelector("#sketchpad");
+const eraseBtn = document.querySelector("#erase-btn");
+const randomColorBtn = document.querySelector("#rand-btn");
+const resizeBtn = document.querySelector("#resize-btn");
+const blackBtn = document.querySelector("#black-btn");
 
-let rows = 16;
-let cols = 16;
+let rows = 0;
+let cols = 0;
 const gridSize = 500;
+let btnChoice = "black"; //initial value
+
+createGridBoxes(16, 16); //initial grid
 
 grid.style.width = `${gridSize}px`;
 grid.style.height = `${gridSize}px`;
 
+//Buttons even listener
+
+eraseBtn.addEventListener('click', () => {
+    btnChoice = "erase";
+});
+
+randomColorBtn.addEventListener('click', () => {
+    btnChoice = "randomColor";
+});
+
+blackBtn.addEventListener('click', () => {
+    btnChoice = "black";
+});
+
+
+
 function createGridBoxes(rows, cols) {
+    grid.innerHTML = "";
     for (let i = 0; i < (rows * cols); i++) {
         let gridDiv = document.createElement("div");
-        // gridDiv.classList.add('gridDiv');
         gridDiv.classList.add("box");
         gridDiv.style.width = `${(gridSize / cols)}px`;
         gridDiv.style.height = `${(gridSize / rows)}px`;
         grid.appendChild(gridDiv);
 
-        gridDiv.addEventListener("mouseenter", () =>{
-            gridDiv.style.backgroundColor = "black";
-        })//
+        gridDiv.addEventListener("mouseenter", () => {
+            if (btnChoice === "black") {
+                gridDiv.style.backgroundColor = "black"; //default behavior
+            }
+            else if (btnChoice === "randomColor") {
+                let red = Math.floor(Math.random() * 255);
+                let green = Math.floor(Math.random() * 255);
+                let blue = Math.floor(Math.random() * 255);
+                let tempRandomColor = `rgb(${red}, ${green}, ${blue})`;
+                gridDiv.style.backgroundColor = tempRandomColor;
+            }
+            else if (btnChoice === "erase"){
+                gridDiv.style.backgroundColor = "white";
+            }
+            else if (btnChoice === "erase"){
+                gridDiv.style.backgroundColor = "black";
+            }
+        });
+
     }
 };
 
-createGridBoxes(rows, cols);
+
+resizeBtn.addEventListener('click', () => {
+    let userInput;
+    do {
+        userInput = prompt("Choose grid size (max: 100)");
+        if (userInput === null) return; // Handle cancel button click
+        userInput = parseInt(userInput);
+    } while (isNaN(userInput) || userInput <= 1 || userInput > 100); // Repeat prompt if input is not a number or out of range
+
+    cols = rows = userInput;
+    createGridBoxes(rows, cols);
+});
 
 
 // function try11(){
