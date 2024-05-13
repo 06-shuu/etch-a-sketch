@@ -45,16 +45,16 @@ function createGridBoxes(rows, cols) {
                 gridDiv.style.backgroundColor = "black"; //default behavior
             }
             else if (btnChoice === "randomColor") {
-                let red = Math.floor(Math.random() * 255);
-                let green = Math.floor(Math.random() * 255);
-                let blue = Math.floor(Math.random() * 255);
+                let red = Math.floor(Math.random() * 256);
+                let green = Math.floor(Math.random() * 256);
+                let blue = Math.floor(Math.random() * 256);
                 let tempRandomColor = `rgb(${red}, ${green}, ${blue})`;
                 gridDiv.style.backgroundColor = tempRandomColor;
             }
             else if (btnChoice === "erase"){
                 gridDiv.style.backgroundColor = "white";
             }
-            else if (btnChoice === "erase"){
+            else if (btnChoice === "black"){
                 gridDiv.style.backgroundColor = "black";
             }
         });
