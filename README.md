@@ -10,4 +10,4 @@ Web-based Etch-A-Sketch
 **Live demo:** 
 - https://06-shuu.github.io/etch-a-sketch
 
-note: this website is optimized for desktop browsers and may not function properly on mobile devices
+note: this website is optimized for desktop browsers only and may not function properly on mobile devices
