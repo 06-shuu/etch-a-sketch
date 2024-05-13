@@ -11,6 +11,8 @@ let btnChoice = "black"; //initial value
 
 createGridBoxes(16, 16); //initial grid
 
+
+//set height & width of the grid to 500px
 grid.style.width = `${gridSize}px`;
 grid.style.height = `${gridSize}px`;
 
@@ -27,7 +29,6 @@ randomColorBtn.addEventListener('click', () => {
 blackBtn.addEventListener('click', () => {
     btnChoice = "black";
 });
-
 
 
 function createGridBoxes(rows, cols) {
@@ -66,19 +67,11 @@ resizeBtn.addEventListener('click', () => {
     let userInput;
     do {
         userInput = prompt("Choose grid size (max: 100)");
-        if (userInput === null) return; // Handle cancel button click
+        if (userInput === null) return;
         userInput = parseInt(userInput);
-    } while (isNaN(userInput) || userInput <= 1 || userInput > 100); // Repeat prompt if input is not a number or out of range
+    } while (isNaN(userInput) || userInput <= 1 || userInput > 100); 
 
     cols = rows = userInput;
     createGridBoxes(rows, cols);
 });
 
-
-// function try11(){
-//     const t = document.createElement("p");
-//     t.innerHTML=`hi`
-//     grid.appendChild(t);
-// };
-
-// try11()
