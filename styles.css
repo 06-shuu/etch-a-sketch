@@ -1,20 +1,37 @@
 * {
     margin: 0;
     padding: 0;
-    /* overflow: hidden; */
     font-family: Roboto, sans-serif;
 }
 
-.flexbox-grid{
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
+}
+
+/* .flexbox-grid{
     display: flex;
     flex-wrap: wrap;
     margin: 100px auto;
     background-color: rgb(255, 255, 255);
     
+} */
+
+.sketchpad{
+    display: flex;
+    flex-wrap: wrap;
+    border: 50px inset rgb(196, 1, 1);
+    border-radius: 20px;
+    width: 500px;
+    height: 500px;
 }
 
 .box{
-    border: 1px solid rgb(211, 211, 211);
+    box-sizing: border-box;
+    background-color: white;
+    border: .1px solid rgb(211, 211, 211);
 }
 
 
