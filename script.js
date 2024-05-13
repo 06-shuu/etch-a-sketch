@@ -6,7 +6,7 @@ const blackBtn = document.querySelector("#black-btn");
 
 let rows = 0;
 let cols = 0;
-const gridSize = 500;
+const gridSize = 400;
 let btnChoice = "black"; //initial value
 
 createGridBoxes(16, 16); //initial grid

@@ -34,10 +34,10 @@ body {
 .sketchpad {
     display: flex;
     flex-wrap: wrap;
-    border: 50px solid rgb(196, 1, 1);
+    border: 30px solid rgb(196, 1, 1);
     border-radius: 20px;
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
     margin: 0 50px 50px 50px;
 }
 
