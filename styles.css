@@ -56,7 +56,8 @@ body {
 #erase-btn,
 #rand-btn,
 #black-btn,
-#resize-btn {
+#resize-btn,
+#reset-btn {
     border-radius: 10px;
     border: 4px groove;
     padding: 6px;
@@ -66,6 +67,7 @@ body {
 #erase-btn:hover,
 #rand-btn:hover,
 #black-btn:hover,
-#resize-btn:hover{
+#resize-btn:hover,
+#reset-btn:hover{
     background-color: rgb(250, 160, 160);
 }
