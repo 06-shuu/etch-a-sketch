@@ -3,6 +3,7 @@ const eraseBtn = document.querySelector("#erase-btn");
 const randomColorBtn = document.querySelector("#rand-btn");
 const resizeBtn = document.querySelector("#resize-btn");
 const blackBtn = document.querySelector("#black-btn");
+const reset = document.querySelector("#reset-btn");
 
 let rows = 0;
 let cols = 0;
@@ -30,6 +31,10 @@ blackBtn.addEventListener('click', () => {
     btnChoice = "black";
 });
 
+reset.addEventListener('click', () => {
+    clearGrid();
+});
+
 
 function createGridBoxes(rows, cols) {
     grid.innerHTML = "";
@@ -54,9 +59,6 @@ function createGridBoxes(rows, cols) {
             else if (btnChoice === "erase"){
                 gridDiv.style.backgroundColor = "white";
             }
-            else if (btnChoice === "black"){
-                gridDiv.style.backgroundColor = "black";
-            }
         });
 
     }
@@ -75,3 +77,9 @@ resizeBtn.addEventListener('click', () => {
     createGridBoxes(rows, cols);
 });
 
+function clearGrid() {
+    const gridBoxes = document.querySelectorAll(".box");
+    gridBoxes.forEach(box => {
+        box.style.backgroundColor = "white";
+    });
+}
