@@ -45,7 +45,7 @@ function createGridBoxes(rows, cols) {
         gridDiv.style.height = `${(gridSize / rows)}px`;
         grid.appendChild(gridDiv);
 
-        gridDiv.addEventListener("mouseenter", () => {
+        gridDiv.addEventListener("mouseover", () => {
             if (btnChoice === "black") {
                 gridDiv.style.backgroundColor = "black"; //default behavior
             }
