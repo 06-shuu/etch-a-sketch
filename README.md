@@ -1,7 +1,7 @@
 # Etch-A-Sketch
 Web-based Etch-A-Sketch
 
-![demo](https://github.com/06-shuu/etch-a-sketch/assets/154021913/48052eef-5500-4398-af49-9007943d6f51)
+![Untitled video - Made with Clipchamp](https://github.com/06-shuu/etch-a-sketch/assets/154021913/4950147c-e170-47a1-9db3-b02022f5aa26)
 
 **Resourses:** 
  - Idea: https://www.theodinproject.com/
@@ -10,4 +10,4 @@ Web-based Etch-A-Sketch
 **Live demo:** 
 - https://06-shuu.github.io/etch-a-sketch
 
-note: this website is optimized for desktop browsers only and may not function properly on mobile devices
+
